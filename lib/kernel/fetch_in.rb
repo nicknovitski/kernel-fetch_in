@@ -1,7 +1,15 @@
-require "kernel/fetch_in/version"
+require 'kernel/fetch_in'
 
 module Kernel
-  module FetchIn
-    # Your code goes here...
+  def fetch_in(collection, *keys)
+    last_key = nil
+    keys.reduce(collection) do |c, k|
+      last_key = k
+      c.fetch(k)
+    end
+  rescue IndexError, KeyError
+    raise unless block_given?
+    yield last_key
   end
+  private :fetch_in
 end
