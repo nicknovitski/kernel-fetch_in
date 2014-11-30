@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Nick Novitski']
   spec.email         = ['nicknovitski@gmail.com']
   spec.summary       = 'Nested #fetch in functional and OO flavors'
-  spec.homepage      = ""
+  spec.homepage      = 'https://github.com/nicknovitski/kernel-fetch_in'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
