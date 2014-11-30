@@ -1,5 +1,6 @@
 module FetchIn
-  def self.fetch_in(collection, *keys)
+  def self.fetch_in(collection, first_key, *rest)
+    keys = [first_key] + rest
     last_key = nil
     keys.reduce(collection) do |c, k|
       last_key = k

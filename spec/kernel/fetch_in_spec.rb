@@ -6,6 +6,12 @@ RSpec.describe Kernel do
   let(:value) { double }
 
   describe '#fetch_in' do
+    context 'passed no key arguments' do
+      it 'raises an ArgumentError' do
+        expect { fetch_in(collection) }.to raise_error ArgumentError
+      end
+    end
+
     context 'passed a single key argument' do
       it 'returns what #fetch on the collection argument returns' do
         allow(collection).to receive(:fetch).with(key) { value }
