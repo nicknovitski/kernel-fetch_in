@@ -3,3 +3,12 @@ rvm:
 - 1.9.3
 - 2.0.0
 - 2.1.5
+deploy:
+  provider: rubygems
+  api_key:
+    secure: bgwOZUqdIvxdsvTqxTAp/Ay1QzWlMCcs8cDZ5/EJQWogeHObD9RAeHGchMYJeon1vKgkFBx1pQW/rVzcDzsXii8Cn7u2IYqHeVMWoYkoB/svavY6gGd/amM40HhvyK4HNZpXxZJuqZpJryUD3igNkbdskbYS5iTvE8IWQixmiMU=
+  gem: kernel-fetch_in
+  on:
+    tags: true
+    repo: nicknovitski/kernel-fetch_in
+    all_branches: true
