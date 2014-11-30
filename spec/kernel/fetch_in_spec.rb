@@ -19,7 +19,7 @@ RSpec.describe Kernel do
       end
 
       [IndexError, KeyError].each do |err|
-        context "when #fetch raises a #{err}" do
+        context "when #fetch raises #{err}" do
           before { allow(collection).to receive(:fetch).with(key) { raise err } }
 
           it 'raises that Error' do
