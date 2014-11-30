@@ -6,7 +6,7 @@ module FetchIn
       last_key = k
       c.fetch(k)
     end
-  rescue IndexError, KeyError
+  rescue IndexError
     raise unless block_given?
     yield last_key
   end
