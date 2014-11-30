@@ -1,5 +1,3 @@
-require 'kernel/fetch_in'
-
 module Kernel
   def fetch_in(collection, *keys)
     last_key = nil
